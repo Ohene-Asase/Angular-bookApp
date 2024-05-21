@@ -1,0 +1,20 @@
+<nav class="navbar bg-body-tertiary">
+    <i class="fa-solid fa-book ml-4">Books</i>
+</nav>
+
+
+<div class="container mt-5">
+    <h2>Book Details</h2>
+    <div class="d-flex align-items-center">
+        <div class="input-group" style="margin-right: 40px;" >
+            <input type="text" class="form-control" placeholder="Search" matInput (keyup)="setFilterValue($event)" >
+        </div>
+        <button type="button" class="btn btn-primary" (click)="openModal()">
+            <i class="fa-regular fa-plus">  Add Book</i>
+        </button>
+    </div>
+  <div class="mt-5">
+    <app-table [filterValue]="filterValue" ></app-table> 
+  </div>
+      
+</div>
